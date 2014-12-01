@@ -11,10 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'monban'
 #gem 'pry-debugger'
   #having issues with debugger not installing. will uncomment it back in once I figure it out
-gem 'pry-rails'
 gem 'puma'
 gem 'rails', '4.1.6'
-gem 'rspec-rails'
 gem 'rubocop'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
@@ -23,3 +21,11 @@ gem 'spring',        group: :development
 gem 'suspenders'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+group :development, :test do
+  gem "capybara"
+  gem "factory_girl_rails"
+  gem "launchy"
+  gem "pry-rails"
+  gem "rspec-rails"
+end
+

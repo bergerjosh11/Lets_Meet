@@ -4,8 +4,6 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'bookings'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'dashing-rails'
-gem 'database_cleaner'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'monban'
@@ -23,6 +21,8 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem "capybara"
+  gem "dashing-rails"
+  gem "database_cleaner"
   gem "factory_girl_rails"
   gem "launchy"
   gem "pry-rails"

@@ -8,7 +8,6 @@ gem 'dashing-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'monban'
-gem 'monban-generators'
 #gem 'pry-debugger'
   #having issues with debugger not installing. will uncomment it back in once I figure it out
 gem 'pry-rails'

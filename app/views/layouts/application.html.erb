@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+<% if signed_in? %>
+  <%= link_to "Sign out", session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign in", new_session_path %>
+  <%= link_to "Sign up", new_user_path %>
+<% end %>
 <head>
   <title>LetsMeet</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>

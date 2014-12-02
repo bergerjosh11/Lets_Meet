@@ -12,7 +12,5 @@ gem 'rubocop'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spring'
-gem 'sqlite3'
-gem 'taps'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'

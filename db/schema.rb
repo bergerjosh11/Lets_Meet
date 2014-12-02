@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20141201155648) do
   create_table "password_resets", force: true do |t|
     t.integer  "user_id"
     t.string   "token"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "password_resets", ["user_id"], name: "index_password_resets_on_user_id"

@@ -1,4 +1,6 @@
 <%= form_for @user do |form| %>
+  <%= render “errors”, target: @user %>
+
   <div class="form-container">
     <div>
       <%= form.label :email %>
@@ -13,6 +15,5 @@
     <div class="login">
       <%= form.submit "Sign up" %>
     </div>
-  </div> <!--end form container-->
-  <%= render “errors”, target: @user %>
+  </div>
 <% end %>

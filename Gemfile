@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'better_errors'
 gem 'binding_of_caller'
 gem 'bookings'
 gem 'coffee-rails', '~> 4.0.0'
@@ -20,8 +19,8 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'better_errors'
   gem 'capybara'
-  gem 'dashing-rails'
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'pry-rails'

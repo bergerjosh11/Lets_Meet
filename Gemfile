@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
-gem 'better_errors'
 gem 'bookings'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'database_cleaner'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'monban'

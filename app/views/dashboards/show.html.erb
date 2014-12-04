@@ -14,14 +14,15 @@
 <div class="add button">
   <%= button_to "Add Event", new_event_path, method: :get %>
 </div>
-  <% @events.each do |event| %>
-      <li>
+  <%@events.each do |event|%>
+      <ul>
           <div class="details">
-            <h4><%= event.name %></h4>
+            <li><h4><%= event.name %></h4></li>
             <div><%= event.location %></div>
             <div><%= event.date %></div>
-            <div class="time">$<%= event.time %></div>
+            <div class="time"><%= event.time %></div>
           </div> <!--end details-->
+            </ul>
         <% end %>
         </div>
-      </li>
+

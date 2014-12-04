@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   def index
     @event = Event.all
-    redirect_to :back
   end
 
   def new
@@ -12,10 +11,9 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
 
     if @event.save
-      @event.errors.full_messages
       redirect_to dashboard_path
     else
-      redirect_to :back
+      render :new
     end
   end
 
@@ -29,11 +27,13 @@ class EventsController < ApplicationController
 
   def update
     event = Event.find(params[:id])
+  end
 
+  def find
     if event.update(event_params)
       redirect_to event_path
     else
-      redirect_to :back
+      render :edit
     end
   end
 
@@ -42,10 +42,6 @@ class EventsController < ApplicationController
     event.destroy
 
     redirect_to dashboard_path
-  end
-
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
   private

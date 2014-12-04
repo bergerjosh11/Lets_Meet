@@ -22,8 +22,7 @@
       <div><%= event.date %></div>
       <div><%= event.time %></div>
       <div>
-        <%= button_to "Edit Event", edit_event_path(event), method: :get %>
+        <%= link_to "Edit Event", edit_event_path(event), method: :get %>
       </div>
   </ul>
 <% end %>
-

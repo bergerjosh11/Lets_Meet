@@ -26,7 +26,7 @@ class EventsController < ApplicationController
     if event.update(event_params)
       redirect_to dashboard_path
     else
-      redirect_to :back
+      render :edit
     end
   end
 

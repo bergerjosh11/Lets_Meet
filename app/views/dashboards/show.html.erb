@@ -12,16 +12,16 @@
 
 
 <div>
-  <%= button_to "Add Event", new_event_path, method: :get %>
+<%= button_to "Add Event", new_event_path, method: :get %>
 </div>
-  <%@events.each do |event|%>
-    <ul>
-      <div>
-        <li><h4><%= event.name %></h4></li>
-        <div><%= event.location %></div>
-        <div><%= event.date %></div>
-        <div><%= event.time %></div>
-      </div>
-    </ul>
-  <% end %>
-</div>
+<%@events.each do |event|%>
+  <ul>
+    <div>
+      <li><h4><%= event.name %></h4></li>
+      <div><%= event.location %></div>
+      <div><%= event.date %></div>
+      <div><%= event.time %></div>
+    </div>
+  </ul>
+<% end %>
+

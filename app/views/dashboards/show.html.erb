@@ -11,18 +11,17 @@
 
 
 
-<div class="add button">
+<div>
   <%= button_to "Add Event", new_event_path, method: :get %>
 </div>
   <%@events.each do |event|%>
-      <ul>
-          <div class="details">
-            <li><h4><%= event.name %></h4></li>
-            <div><%= event.location %></div>
-            <div><%= event.date %></div>
-            <div class="time"><%= event.time %></div>
-          </div> <!--end details-->
-            </ul>
-        <% end %>
-        </div>
-
+    <ul>
+      <div>
+        <li><h4><%= event.name %></h4></li>
+        <div><%= event.location %></div>
+        <div><%= event.date %></div>
+        <div><%= event.time %></div>
+      </div>
+    </ul>
+  <% end %>
+</div>

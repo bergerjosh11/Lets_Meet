@@ -26,8 +26,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    event = Event.find(params[:id])
-    event.destroy
+    event = Event.destroy(params[:id])
 
     redirect_to dashboard_path
   end

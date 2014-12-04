@@ -39,14 +39,6 @@ class EventsController < ApplicationController
 
   private
 
-  def find
-    if event.update(event_params)
-      redirect_to event_path
-    else
-      render :edit
-    end
-  end
-
   def event_params
     params.require(:event).permit(
       :name,

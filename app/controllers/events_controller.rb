@@ -4,9 +4,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    event = Event.new(event_params)
 
-    if @event.save
+    if event.save
       redirect_to dashboard_path
     else
       render :new

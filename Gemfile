@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'geocoder'
+gem 'gmaps4rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'monban'

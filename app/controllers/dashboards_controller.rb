@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
   def show
-    @events = Event.all
+    events = Event.all
   end
 end

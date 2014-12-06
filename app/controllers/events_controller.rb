@@ -35,10 +35,10 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(
-      :name,
+      :date,
       :description,
       :location,
-      :date,
+      :name,
       :time,
       :user_id
     ).merge(user: current_user)

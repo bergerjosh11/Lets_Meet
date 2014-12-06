@@ -14,10 +14,22 @@
 <%@events.each do |event|%>
   <ul>
     <div>
-      <li><h4><%= event.name %></h4></li>
-      <div><%= event.location %></div>
-      <div><%= event.date %></div>
-      <div><%= event.time %></div>
+      <li>
+        <h4><%= event.name %></h4>
+      </li>
+
+      <div>
+        <%= event.location %>
+      </div>
+
+      <div>
+        <%= event.date %>
+      </div>
+
+      <div>
+        <%= event.time %>
+      </div>
+
       <div>
         <%= button_to "Delete Event", event_path(event), method: :delete %>
       </div>

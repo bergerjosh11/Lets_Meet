@@ -9,19 +9,31 @@
   </ul>
 </body>
 
-
-
-<div>
-<%= button_to "Add Event", new_event_path, method: :get %>
-</div>
 <%@events.each do |event|%>
   <ul>
     <div>
       <li><h4><%= event.name %></h4></li>
-      <div><%= event.location %></div>
-      <div><%= event.date %></div>
-      <div><%= event.time %></div>
-    </div>
-  </ul>
-<% end %>
 
+      <div>
+        <%= event.location %>
+      </div>
+
+      <div>
+        <%= event.date %>
+      </div>
+
+      <div>
+        <%= event.time %>
+      </div>
+
+      <div>
+        <% if current_user.attendances.include?(event) %>
+          <%= button_to "Unattend", event_attendance_path(event), method: :delete %>
+          <%= pluralize(event.attendances.count, "attendance") %>
+        <% else %>
+          <%= button_to "RSVP", event_attendance_path(event) %>
+        <% end %>
+      </div>
+
+    </ul>
+  <% end %>

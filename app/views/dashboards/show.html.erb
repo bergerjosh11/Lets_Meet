@@ -9,12 +9,12 @@
   </ul>
 </body>
 
-<div style='width: 800px;'>
+<div style="width: 800px;">
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 
 <div>
-<%= button_to "Add Event", new_event_path, method: :get %>
+<%= link_to "Add Event", new_event_path, method: :get %>
 </div>
 <%@events.each do |event|%>
   <ul>

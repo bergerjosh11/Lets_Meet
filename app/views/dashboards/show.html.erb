@@ -18,9 +18,18 @@
   <ul>
     <div>
       <li><h4><%= event.name %></h4></li>
-      <div><%= event.location %></div>
-      <div><%= event.date %></div>
-      <div><%= event.time %></div>
+      <div>
+        <%= event.location %>
+      </div>
+
+      <div>
+        <%= event.date %>
+      </div>
+
+      <div>
+        <%= event.time %>
+      </div>
+
       <div>
         <%= link_to "Edit Event", edit_event_path(event), method: :get %>
       </div>

@@ -18,15 +18,11 @@ class UsersController < ApplicationController
 
   def index
     @user = User.each
-    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
     end
   end
 
   def update
     @user = current_user
-    current_user.update_attributes(update_user_params)
     redirect_to edit_users_path
   end
 
@@ -35,8 +31,3 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :password)
   end
-
-  def update_user_params
-    params.require(:user).permit(:address)
-  end
-end

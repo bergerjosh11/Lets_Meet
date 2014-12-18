@@ -18,7 +18,6 @@ class UsersController < ApplicationController
 
   def index
     @user = User.each
-    end
   end
 
   def update

@@ -1,9 +1,5 @@
 class Event < ActiveRecord::Base
   belongs_to :user
-
-  validates :name, presence: true
-  validates :description, presence: true
-  validates :location, presence: true
-  validates :time, presence: true
-  validates :date, presence: true
+  geocoded_by :address
+  after_validation :geocode
 end

@@ -9,29 +9,27 @@
   </ul>
 </body>
 
-<div style="width: 800px;">
-  <div id="map" style='width: 800px; height: 400px;'>
-  </div>
-</div>
-
 <div>
 <%= link_to "Add Event", new_event_path, method: :get %>
 </div>
-<%@events.each do |event|%>
-  <ul>
-    <div>
-      <li><h4><%= event.name %></h4></li>
-      <div>
-        <%= event.location %>
-      </div>
 
+<% @events.each do |event|%>
+  <%= link_to event_path event do %>
+    <ul>
       <div>
-        <%= event.date %>
-      </div>
+        <h4><%= event.name %></h4>
+        <div>
+          <%= event.location %>
+        </div>
 
-      <div>
-        <%= event.time %>
+        <div>
+          <%= event.date %>
+        </div>
+
+        <div>
+          <%= event.time %>
+        </div>
       </div>
-    </div>
-  </ul>
+    </ul>
+  <% end %>
 <% end %>

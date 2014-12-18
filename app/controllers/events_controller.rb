@@ -23,6 +23,9 @@ class EventsController < ApplicationController
 
   def update
     event = Event.find(params[:id])
+    @event = current_event
+    current_event.update_attributes(update_event_params)
+    redirect_to edit_event_path
   end
 
   def destroy
@@ -48,8 +51,14 @@ class EventsController < ApplicationController
       :description,
       :location,
       :date,
+      :id,
       :time,
-      :user_id
+      :user_id,
+      :address
     ).merge(user: current_user)
+  end
+
+  def update_event_params
+    params.require(:event).permit(:address)
   end
 end

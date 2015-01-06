@@ -23,6 +23,11 @@ class EventsController < ApplicationController
 
   def update
     event = Event.find(params[:id])
+    if event.update(event_params)
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -33,14 +38,6 @@ class EventsController < ApplicationController
   end
 
   private
-
-  def find
-    if event.update(event_params)
-      redirect_to event_path
-    else
-      render :edit
-    end
-  end
 
   def event_params
     params.require(:event).permit(

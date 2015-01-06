@@ -2,10 +2,37 @@
 <body>
 <ul> Here we will find and plan events for you and your buddies to do around town</ul>
   <ul> We will allow you to:
-    <li>Create events</li>
     <li>Search for Events</li>
     <li>Find locales to have events</li>
     <li>Invite your buddies</li>
     <li>Sign up for events</li>
   </ul>
 </body>
+<div>
+<%= button_to "Add Event", new_event_path, method: :get %>
+</div>
+<%@events.each do |event|%>
+  <ul>
+    <div>
+      <li>
+        <h4><%= event.name %></h4>
+      </li>
+
+      <div>
+        <%= event.location %>
+      </div>
+
+      <div>
+        <%= event.date %>
+      </div>
+
+      <div>
+        <%= event.time %>
+      </div>
+
+      <div>
+        <%= button_to "Delete Event", event_path(event), method: :delete %>
+      </div>
+    </div>
+  </ul>
+<% end %>
